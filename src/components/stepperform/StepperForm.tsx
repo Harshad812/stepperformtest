@@ -116,25 +116,6 @@ export const StepperForm = () => {
               <Box sx={{ paddingTop: "52px" }}>
                 {getStepContent(activeStep)}
               </Box>
-
-              {/* <div>
-              <Button disabled={activeStep === 0} onClick={handleBack}>
-                Back
-              </Button>
-              {isStepOptional(activeStep) && (
-                <Button
-                  variant="contained"
-                  color="primary"
-                  onClick={handleSkip}
-                >
-                  Skip
-                </Button>
-              )}
-
-              <Button variant="contained" color="primary" onClick={handleNext}>
-                {activeStep === steps.length - 1 ? "Finish" : "Next"}
-              </Button>
-            </div> */}
             </div>
           )}
         </div>

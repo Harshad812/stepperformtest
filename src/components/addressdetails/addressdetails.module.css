@@ -4,3 +4,7 @@
 .textbox {
   width: 100%;
 }
+
+.container {
+  padding-bottom: 32px;
+}

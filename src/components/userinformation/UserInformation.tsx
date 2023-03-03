@@ -57,9 +57,9 @@ export const UserInformation = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }} className={classes.userForm}>
+    <Box>
       <form onSubmit={handleSubmit}>
-        <Box sx={{ marginBottom: "32px" }}>
+        <div className={classes.container}>
           <Grid
             container
             spacing={{ xs: 2, md: 3 }}
@@ -203,7 +203,7 @@ export const UserInformation = () => {
               </RadioGroup>
             </Grid>
           </Grid>
-        </Box>
+        </div>
         <Button variant="contained" type="submit">
           save
         </Button>

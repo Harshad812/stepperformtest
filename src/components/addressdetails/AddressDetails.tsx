@@ -145,9 +145,9 @@ export const AddressDetails = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }} className={classes.userForm}>
+    <Box className={classes.userForm}>
       <form onSubmit={handleSubmit}>
-        <Box sx={{ marginBottom: "32px" }}>
+        <Box className={classes.container}>
           <Grid
             container
             spacing={{ xs: 2, md: 3 }}

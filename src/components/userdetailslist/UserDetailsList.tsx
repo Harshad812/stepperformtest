@@ -18,7 +18,7 @@ export const UserDetailsList = () => {
 
   return (
     <TableContainer component={Card}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table aria-label="simple table" border={1}>
         <TableHead>
           <TableRow>
             <TableCell>
@@ -32,10 +32,7 @@ export const UserDetailsList = () => {
         </TableHead>
         <TableBody>
           {userDetails.map(([key, val]) => (
-            <TableRow
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              key={key}
-            >
+            <TableRow key={key}>
               <TableCell component="th" scope="row">
                 <Typography textTransform="capitalize">{key}</Typography>
               </TableCell>
