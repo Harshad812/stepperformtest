@@ -52,7 +52,6 @@ export const UserInformation = () => {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    console.log(formValues);
     setUser && setUser({ userDetails: formValues });
     handleNext && handleNext();
   };
@@ -68,6 +67,7 @@ export const UserInformation = () => {
           >
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="First Name"
                 name="firstName"
@@ -77,6 +77,7 @@ export const UserInformation = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="Middle Name"
                 name="middleName"
@@ -86,6 +87,7 @@ export const UserInformation = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="Last Name"
                 name="lastName"
@@ -95,6 +97,7 @@ export const UserInformation = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="Mobile No"
                 name="mobile"
@@ -104,6 +107,8 @@ export const UserInformation = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
+                type="email"
                 className={classes.textbox}
                 placeholder="Email"
                 name="email"
@@ -113,6 +118,7 @@ export const UserInformation = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 type="date"
                 className={classes.textbox}
                 placeholder="Birth Day"
@@ -123,6 +129,7 @@ export const UserInformation = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="Age"
                 name="age"
@@ -132,6 +139,7 @@ export const UserInformation = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="Blood Group"
                 name="bloodGroup"
@@ -141,6 +149,7 @@ export const UserInformation = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="Height"
                 name="height"
@@ -150,6 +159,7 @@ export const UserInformation = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="Weight"
                 name="weight"

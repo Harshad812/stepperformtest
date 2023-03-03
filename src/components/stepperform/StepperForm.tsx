@@ -36,7 +36,6 @@ export const StepperForm = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [skipped, setSkipped] = useState(new Set());
   const steps = getSteps();
-  console.log("user", user);
   const isStepOptional = (step: number) => {
     return step === 1;
   };

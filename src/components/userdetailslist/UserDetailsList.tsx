@@ -15,7 +15,6 @@ export const UserDetailsList = () => {
   const { user } = useContext(UserContext);
   const data = { ...user?.userDetails, ...user?.addressDetails };
   const userDetails = Object.entries(data);
-  console.log(userDetails);
 
   return (
     <TableContainer component={Card}>

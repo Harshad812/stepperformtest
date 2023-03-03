@@ -133,7 +133,6 @@ export const AddressDetails = () => {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    console.log(formValues);
 
     setUser &&
       setUser((prev: UserType) => {
@@ -156,6 +155,7 @@ export const AddressDetails = () => {
           >
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="Address Line 1"
                 name="addressLine1"
@@ -165,6 +165,7 @@ export const AddressDetails = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="Address Line 1"
                 name="addressLine2"
@@ -174,6 +175,7 @@ export const AddressDetails = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <Select
+                required
                 className={classes.textbox}
                 defaultValue="lable"
                 name="city"
@@ -192,6 +194,7 @@ export const AddressDetails = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <Select
+                required
                 className={classes.textbox}
                 defaultValue="lable"
                 name="state"
@@ -210,6 +213,7 @@ export const AddressDetails = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <Select
+                required
                 className={classes.textbox}
                 defaultValue="lable"
                 name="country"
@@ -228,6 +232,7 @@ export const AddressDetails = () => {
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
+                required
                 className={classes.textbox}
                 placeholder="Pin Code"
                 name="pincode"
