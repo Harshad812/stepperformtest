@@ -3,12 +3,12 @@ import {
   Button,
   FormControlLabel,
   Grid,
+  MenuItem,
   Radio,
   RadioGroup,
+  Select,
   TextField,
-  TextFieldProps,
 } from "@mui/material";
-import { DatePicker } from "@mui/x-date-pickers-pro";
 import { useContext, useState } from "react";
 import { UserContext } from "../stepperform";
 import classes from "./userinformation.module.css";
@@ -25,6 +25,18 @@ export const UserInformation = () => {
     { value: "divorced", label: "Divorced" },
     { value: "widowed", label: "Widowed" },
   ];
+  const bloodGroups = [
+    { value: "A+", label: "A+" },
+    { value: "A-", label: "A-" },
+    { value: "B+", label: "B+" },
+    { value: "B-", label: "B-" },
+    { value: "AB+", label: "AB+" },
+    { value: "AB-", label: "AB-" },
+    { value: "O+", label: "O+" },
+    { value: "O-", label: "O-" },
+    { value: "ABO+", label: "ABO+" },
+    { value: "ABO-", label: "ABO-" },
+  ];
 
   const initialValue = {
     firstName: "",
@@ -34,7 +46,7 @@ export const UserInformation = () => {
     email: "",
     birthday: "",
     age: "",
-    bloodGroup: "",
+    bloodGroup: "lable",
     height: "",
     weight: "",
     gender: "female",
@@ -138,14 +150,23 @@ export const UserInformation = () => {
               />
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
-              <TextField
+              <Select
                 required
                 className={classes.textbox}
-                placeholder="Blood Group"
+                defaultValue="lable"
                 name="bloodGroup"
                 value={formValues.bloodGroup}
                 onChange={handleChange}
-              />
+              >
+                <MenuItem value="lable" disabled>
+                  Blood Group
+                </MenuItem>
+                {bloodGroups.map((group, i) => (
+                  <MenuItem value={group.value} key={i}>
+                    {group.label}
+                  </MenuItem>
+                ))}
+              </Select>
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
               <TextField
